@@ -1,25 +1,25 @@
 departments as d
 -
-dept_no PK int
+dept_no PK string
 dept_name string INDEX
 
 
 dept_emp
 -
 emp_no int FK >- e.emp_no
-dept_no int FK >- d.dept_no
+dept_no string FK >- d.dept_no
 from_date date
 to_date date
 
 dept_manager
-----
+-
 emp_no int FK >- e.emp_no
-dept_no int FK >- d.dept_no
+dept_no string FK >- d.dept_no
 from_date date
 to_date date
 
 employeees as e
-------------
+-
 emp_no PK int 
 birth_date date
 first_name string
@@ -29,7 +29,7 @@ hire_date date
 
 
 saleries
-----
+-
 emp_no int FK >- e.emp_no
 salary money
 from_date date
@@ -37,7 +37,7 @@ to_date date
 
 
 titles
-----
+-
 emp_no int FK >- e.emp_no
 title string
 from_date date
