@@ -6,14 +6,14 @@ dept_name string INDEX
 
 dept_emp
 -
-emp_no int FK >- e.emp_no
-dept_no string FK >- d.dept_no
+emp_no PK int FK >- e.emp_no
+dept_no PK string FK >- d.dept_no
 from_date date
 to_date date
 
 dept_manager
 -
-emp_no int FK >- e.emp_no
+emp_no PK int FK >- e.emp_no
 dept_no string FK >- d.dept_no
 from_date date
 to_date date
@@ -30,7 +30,7 @@ hire_date date
 
 saleries
 -
-emp_no int FK >- e.emp_no
+emp_no PK int FK >- e.emp_no
 salary money
 from_date date
 to_date date
@@ -38,7 +38,7 @@ to_date date
 
 titles
 -
-emp_no int FK >- e.emp_no
-title string
-from_date date
+emp_no PK int FK >- e.emp_no
+title PK string
+from_date PK date
 to_date date
